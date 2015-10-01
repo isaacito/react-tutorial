@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>react tutorial</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <h1>React Tutorial</h1>
+
+  <div id="content">
+
+  </div>
+
+  <script type="text/jsx">
+
+    var IsaacsComponent = React.createClass({
+
+      render: function(){
+        return(
+        <h2>{this.props.person} likes to eat {this.props.food} </h2>
+        );
+      }
+
+    });
+        
+    React.render(
+    <div>
+     <IsaacsComponent person="Salchi" food="chipotle" />
+     <IsaacsComponent person="Kito" food="cream cheese" />
+     <IsaacsComponent person="Chanc'" food="frijoles"/>
+     <IsaacsComponent person="Patty" food="weyvos"/>
+   </div>,
+   document.getElementById('content')
+  
+  );
+
+  </script>
+
+</body>
+</html>
